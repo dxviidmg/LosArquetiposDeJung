@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block title%}Proximos eventos{%endblock title%}
+
+{%block content%}
+
+	{%for evento in eventos%}
+		<p><img src="/media/{{evento.flyer}}" height="100"></p>
+		<p>{{evento.nombre}}</p>
+		<p>{{evento.fecha|date:"d M Y"}}</p>
+		<p>{{evento.hora}}</p>
+		<p>{{evento.lugar}}</p>
+	{%empty%}
+		<h2>Por el momento no hay shows, inviten a uno</h2>
+	{%endfor%}
+	
+{%endblock content%}

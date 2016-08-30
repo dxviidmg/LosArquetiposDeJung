@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{%block title%}Canciones{%endblock title%}
+
+{%block content%}
+
+	{%for cancion in canciones%}
+	<a href="{{cancion.get_absolute_url}}">{{cancion.titulo}}</a>
+	{%empty%}
+	<h2>Por el momento no hay canciones</h2>
+	{%endfor%}
+
+{%endblock content%}

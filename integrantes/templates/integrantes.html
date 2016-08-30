@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block title%}Integrantes{%endblock title%}
+
+{%block content%}
+
+	{%for integrante in integrantes%}
+ 		<img src="/media/{{integrante.foto}}" height="120">
+  		<p>{{integrante.nombre}}</p> 
+  		<p>{{integrante.rol}}</p>
+	{%empty%}
+		<h2>Vacio</h2>
+	{%endfor%}
+	
+{%endblock content%}
