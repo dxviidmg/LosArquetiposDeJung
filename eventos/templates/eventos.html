@@ -3,8 +3,14 @@
 
 {%block content%}
 
-	{%for evento in eventos%}
-		<p><img src="/media/{{evento.flyer}}" height="100"></p>
+	{%for evento in eventosf%}
+
+		{%if evento.flyer%}
+			<p><img src="/media/{{evento.flyer}}" height="100"></p>
+		{%else%}
+			<p><img src="/media/evento/nohayfoto.png" height="100"></p>
+		{%endif%}
+
 		<p>{{evento.nombre}}</p>
 		<p>{{evento.fecha|date:"d M Y"}}</p>
 		<p>{{evento.hora}}</p>
