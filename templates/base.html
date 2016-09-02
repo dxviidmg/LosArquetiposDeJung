@@ -1,10 +1,69 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
 	<title>{%block title%}{%endblock title%}</title>
     <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<style type="text/css">
+		body {
+			padding-top: 70px;
+			padding-bottom: 70px;
+			}
+	</style>
+
 </head>
-<body>
-{%block content%}{%endblock content%}
+<body>	<!-- Optional theme  background="{%static 'img/fondo.jpg'%}"-->
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	  <!-- El logotipo y el icono que despliega el menú se agrupan
+	       para mostrarlos mejor en los dispositivos móviles -->
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse"
+	            data-target=".navbar-ex1-collapse">
+	      <span class="sr-only">Desplegar navegación</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="#">Los Arquetipos de Jung</a>
+	  </div>
+	  <div class="collapse navbar-collapse navbar-ex1-collapse"> 
+	    <ul class="nav navbar-nav navbar-right">
+	      <li><a href="{%url 'home:home'%}">Inicio</a></li>
+	      <li><a href="{%url 'home:bio'%}">Biografia</a></li>
+	      <li><a href="{%url 'integrantes:listIntegrantes'%}">Integrantes</a></li>
+	      <li><a href="{%url 'eventos:listEventos'%}">Proximos shows</a></li>
+	      <li><a href="{%url 'canciones:listCanciones'%}">Letras</a></li>
+	      <li><a href="">      </a></li>
+	    </ul>
+	  </div>
+	</nav>
+
+
+	
+
+<div class="row">
+	<div class="col-md-8 col-md-offset-2 center" align="center">{%block content%}{%endblock content%}</div>
+</div>
+
+
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+	    <ul class="nav navbar-nav">
+			<p class="navbar-text">Derechos Resevados 2016</p>
+	    </ul>
+</nav>
+
+
+
+	
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
