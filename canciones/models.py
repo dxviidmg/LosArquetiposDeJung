@@ -9,6 +9,8 @@ class Cancion(models.Model):
 	letra = models.TextField()
 	slug = models.SlugField()
 
-	#Genera url con un dato de la BD del modelo
+	def __str__(self):
+		return self.titulo
+			#Genera url con un dato de la BD del modelo
 	def get_absolute_url(self):
 		return reverse('canciones:letraCancion', args=[self.slug])

@@ -1,1 +1,10 @@
-body { padding-top: 70px; }
+body {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-image: url(img/fondo.jpg);
+
+table {
+	text-align: center;
+	margin: auto;
+	vertical-align:middle;
+}

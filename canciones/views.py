@@ -3,9 +3,9 @@ from django.views.generic import View
 from .models import Cancion
 
 class ListCanciones(View):
-	def get(self, request):
+	def get(self, request,):
 		template_name = "canciones.html"
-		canciones = Cancion.objects.all()
+		canciones = Cancion.objects.all().order_by("titulo")
 		context = {
 		'canciones': canciones
 		}

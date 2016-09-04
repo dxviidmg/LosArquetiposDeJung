@@ -1,6 +1,27 @@
-body{
-    color: purple;
-    background-color: #d8da3d;
-    padding-top: 70px;
-	}
+body {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-image: url(fondo.jpg);
 
+  color: #FFF;
+  font-family: 'impact';
+ }
+
+table{
+	text-align: center;
+	margin: auto;
+
+}
+
+.texto {
+	font-size: 18px;
+ 	line-height: 25px;
+}
+
+a{
+	color: #FFF;
+}
+a:hover {
+    color: #E6E6E6;
+    text-decoration: none;
+}

@@ -4,11 +4,24 @@
 {%block content%}
 
 	{%for integrante in integrantes%}
- 		<img src="/media/{{integrante.foto}}" height="200">
-  		<p>{{integrante.nombre}}</p> 
-  		<p>{{integrante.rol}}</p>
+	<div class="table-responsive">
+	<table class="table">
+	<tbody>
+		<tr>
+			<td WIDTH=50% class="text-right">
+				<img src="/media/{{integrante.foto}}" height="150">
+			</td>
+			<td WIDTH=50%>
+				<p class="texto" align="left">{{integrante.nombre}}</p>
+				<p class="texto" align="left">{{integrante.rol}}</p>
+			</td>
+		</tr>
+
 	{%empty%}
 		<h2>Vacio</h2>
 	{%endfor%}
+	</tbody>
+	</table>
+	</div>
 	
 {%endblock content%}
