@@ -6,7 +6,5 @@
 	
 	<h1><a href="{%url 'canciones:listCanciones'%}">{{cancion.titulo}}</a></h1>
 
-	<p class="texto">{{cancion.letra | escape |linebreaks }}</p>
-
-
-{%endblock content%}
+ 	<h2 class="texto" align="center">{{cancion.letra | escape |linebreaks}}</h2>
+{%endblock content%} 
