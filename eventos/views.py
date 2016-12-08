@@ -5,7 +5,7 @@ from datetime import date
 
 class ListEventos(View):
 	def get(self, request):
-		template_name="eventos.html"
+		template_name="eventos/eventos.html"
 		hoy = date.today()
 		eventos = Evento.objects.all().order_by("fecha")
 		eventosf = []

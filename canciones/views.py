@@ -4,7 +4,7 @@ from .models import Cancion
 
 class ListCanciones(View):
 	def get(self, request,):
-		template_name = "canciones.html"
+		template_name = "canciones/canciones.html"
 		canciones = Cancion.objects.all().order_by("titulo")
 		context = {
 		'canciones': canciones
@@ -13,7 +13,7 @@ class ListCanciones(View):
 
 class LetraCancion(View):
 	def get(self, request, slug):
-		template_name = "letra.html"
+		template_name = "canciones/letra.html"
 		cancion = get_object_or_404(Cancion,slug=slug)
 		context = {
 		'cancion': cancion

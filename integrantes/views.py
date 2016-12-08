@@ -4,7 +4,7 @@ from .models import Integrante
 
 class ListIntegrantes(View):
 	def get(self, request):
-		template_name="integrantes.html"
+		template_name="integrantes/integrantes.html"
 		integrantes = Integrante.objects.all()
 		context = {
 		'integrantes': integrantes
