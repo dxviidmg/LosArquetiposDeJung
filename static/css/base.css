@@ -26,8 +26,9 @@ a:hover {
     text-decoration: none;
 }
 
-h1{
+h1, h2{
 	text-align: center;
+    color: white;
 }
 
 /*Efecto de sombra*/
@@ -82,4 +83,20 @@ a:hover, .navbar-default .navbar-nav > .active > a:focus {
 
 .navbar-default .navbar-nav > li > a {
     color: white; /*Change active text color here*/
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

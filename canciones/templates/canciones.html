@@ -2,9 +2,9 @@
 {%block title%}Canciones{%endblock title%}
 
 {%block content%}
-
+<style type="text/css"></style>
 	{%for cancion in canciones%}
-		<h1><a href="{{cancion.get_absolute_url}}">{{cancion.titulo}}</a></h1>
+		<h2><a href="{{cancion.get_absolute_url}}">{{cancion.titulo}}</a></h2>
 	{%empty%}
 		<h2>No hay canciones</h2>
 	{%endfor%}
