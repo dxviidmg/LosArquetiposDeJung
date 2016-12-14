@@ -1,0 +1,68 @@
+{%extends 'base.html'%}
+
+{%load static%}
+
+{%block title%}Inicio{%endblock title%}
+
+{%block content%}
+
+ <style>
+
+  .area-sombra >.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+      height: 350px;
+  }
+  </style>
+
+<div class="container col-md-12">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      
+    
+
+	{%for foto in fotos%}
+
+      <li data-target="#myCarousel" data-slide-to="{{fotos.pk}}"></li>  
+      {%empty%}
+      
+      	<p>no hay fotos</p>
+      
+      {%endfor%}
+
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+    {% for foto in fotos %}
+        <div class="item {% if forloop.counter == 1 %}active{% endif %}" id="slide{{ forloop.counter }}">
+            <img class="img-responsive center-block" src="{{ foto.imagen.url }}" >
+            <div class="carousel-caption">
+                <h4>{{ foto.descripcion }}</h4>
+                
+            </div>
+        </div>
+    {% endfor %}
+
+
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+{%endblock content%}

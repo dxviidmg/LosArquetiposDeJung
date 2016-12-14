@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'integrantes',
     'eventos',
     'canciones',
+    'galeria',
 ]
 
 MIDDLEWARE = [
