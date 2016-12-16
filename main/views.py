@@ -9,7 +9,7 @@ class Home(View):
 class Bio(View):
 	def get(self, request):
 		template_name = 'main/bio.html'
-		banda = Banda.objects.get(pk=1)
+		banda = Banda.objects.get(pk=1 or None)
 		context = {
 			'banda': banda
 		}
