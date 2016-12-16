@@ -3,8 +3,11 @@
 
 {%block content%}
 	<br>
-
+	{%for banda in bandas%}
 	<h2 class="texto">{{banda.biografia|escape|linebreaks}}</h2>
+	{%empty%}
+	<p class="texto" align="center">Biografía vacia</p>
+	{%endfor%}
 
 {%endblock content%}
 
