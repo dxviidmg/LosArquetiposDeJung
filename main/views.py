@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from django.views.generic import View
 from .models import Banda
 
@@ -9,8 +9,7 @@ class Home(View):
 class Bio(View):
 	def get(self, request):
 		template_name = 'main/bio.html'
-		banda = get_object_or_404(Banda, pk=1)
-		print(banda)
+		banda = Banda.objects.get(pk=1)
 		context = {
 			'banda': banda
 		}
