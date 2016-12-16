@@ -1,5 +1,5 @@
-
 {% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,12 +24,24 @@
 				<!-- Inicia menu -->
 				<div class="collapse navbar-collapse" id="navegation-fm">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="{%url 'main:home'%}">Inicio</a></li>
-						<li><a href="{%url 'main:bio'%}">Biografía</a></li>
-						<li><a href="{%url 'integrantes:listIntegrantes'%}">Integrantes</a></li>
-	      				<li><a href="{%url 'eventos:listEventos'%}">Próximos shows</a></li>
-	      				<li><a href="{%url 'canciones:listCanciones'%}">Letras</a></li>
-	      				<li><a href="{%url 'galeria:listFotos'%}">Galeria</a></li>
+						<li {% if request.resolver_match.url_name == 'home' %}class="active"{% endif %}>
+							<a href="{%url 'main:home'%}">Inicio</a>
+						</li>
+						<li {% if request.resolver_match.url_name == 'bio' %}class="active"{% endif %}>
+							<a href="{%url 'main:bio'%}">Biografía</a>
+						</li>
+						<li {% if request.resolver_match.url_name == 'listIntegrantes' %}class="active"{% endif %}>
+							<a href="{%url 'integrantes:listIntegrantes'%}">Integrantes</a>
+						</li>
+						<li {% if request.resolver_match.url_name == 'listEventos' %}class="active"{% endif %}>
+							<a href="{%url 'eventos:listEventos'%}">Próximos shows</a>
+						</li>
+						<li {% if request.resolver_match.url_name == 'listCanciones' %}class="active"{% endif %}>
+							<a href="{%url 'canciones:listCanciones'%}">Letras</a>
+						</li>
+						<li {% if request.resolver_match.url_name == 'listFotos' %}class="active"{% endif %}>
+							<a href="{%url 'galeria:listFotos'%}">Galeria</a>
+						</li>
 	      				<li><a class="fb-like" data-href="https://www.facebook.com/LosArquetiposRock/" data-width="25" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></a></li>
 					</ul>
 				</div>	
@@ -46,7 +58,6 @@
 	</section>
 
 	<script>
-
 		(function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
 			if (d.getElementById(id)) return;
@@ -54,7 +65,6 @@
 			js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.7&appId=154432518321534";
 			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
-	</script>
 	</script>
 	<script type="text/javascript" src="{%static 'js/jquery.js'%}"></script>
 	<script type="text/javascript" src="{%static 'js/bootstrap.min.js'%}"></script>

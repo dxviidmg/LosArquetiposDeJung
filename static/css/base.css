@@ -48,16 +48,6 @@ h1, h2{
     width: auto;
 }
 
-/* navbar */
-.navbar-brand {
-    padding: 0px;
-}
-
-.navbar-brand>img {
-    height: 100%;
-    width: auto;
-}
-
 /*Menụ̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣̣*/
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: white;  /*Sets the text hover color on navbar*/
@@ -72,13 +62,7 @@ a:hover, .navbar-default .navbar-nav > .active > a:focus {
 
 .navbar-default {
     background-color: #000;
-    border-color: #000;
-}
-
-.nav > li > a:hover,
-.nav > li > a:focus {
-    text-decoration: none;
-    background-color: red; /*Change rollover cell color here*/
+    border-color: transparent;
 }
 
 .navbar-default .navbar-nav > li > a {
