@@ -6,27 +6,16 @@
 
 {%block content%}
 
- <style>
-
-  .area-sombra >.carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 100%;
-      margin: auto;
-      height: 350px;
-  }
-  </style>
-
 <div class="container col-md-12">
   <br>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       
-    
-
 	{%for foto in fotos%}
 
       <li data-target="#myCarousel" data-slide-to="{{fotos.pk}}"></li>  
+      
       {%empty%}
       
       	<p>no hay fotos</p>
@@ -42,12 +31,11 @@
         <div class="item {% if forloop.counter == 1 %}active{% endif %}" id="slide{{ forloop.counter }}">
             <img class="img-responsive center-block" src="{{ foto.imagen.url }}" >
             <div class="carousel-caption">
-                <h4>{{ foto.descripcion }}</h4>
+                <h4 class="hidden-xs">{{ foto.descripcion }}</h4>
                 
             </div>
         </div>
     {% endfor %}
-
 
       </div>
   

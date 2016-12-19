@@ -1,4 +1,5 @@
 {%extends 'base.html'%}
+
 {%block title%}Integrantes{%endblock title%}
 
 {%block content%}
@@ -28,10 +29,10 @@
 				</tr>
 
 			{%empty%}
-				<h2>Vacio</h2>
-			{%endfor%}
 			</tbody>
 		</table>
+		<h2>Vacio</h2>
+			{%endfor%}
 	</div>
 	
 {%endblock content%}
