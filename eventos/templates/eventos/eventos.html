@@ -4,11 +4,11 @@
 
 {%block content%}
 
-	<div class="table-responsive texto">
+	<div class="table-responsive textot">
 		<table class="table">
 			<thead>
 				<tr>
-					<th><p align="center ">Flyer</p></th>
+					<th><p align="center">Flyer</p></th>
 					<th><p align="center">Nombre</p></th>
 					<th><p align="center">Fecha</p></th>
 					<th><p align="center">Hora</p></th>
@@ -23,13 +23,13 @@
 
 					<td>
 						{%if evento.flyer%}
-							<p><img src="/media/{{evento.flyer}}" height="100"></p>
+							<p><img src="/media/{{evento.flyer}}" width="100"></p>
 						{%else%}
 							<p><img src="/media/evento/nohayfoto.png" height="100"></p>
 						{%endif%}
 					</td>
 					<td><p>{{evento.nombre}}</p></td>
-					<td><p>{{evento.fecha|date:"d M Y"}}</p></td>
+					<td><p>{{evento.fecha|date:"d/M/Y"}}</p></td>
 					<td><p>{{evento.hora}}</p></td>
 					<td><p>{{evento.lugar}}</p></td>
 				</tr>
@@ -37,10 +37,10 @@
 	{%empty%}
 
 			</tbody>
-		</table>
- 	</div>
+
  	<h1 class="texto" align="center">¡¡¡Por el momento no hay shows, inviten a uno!!! lml</h1>
  	
 	{%endfor%}
-	
+		</table>
+ 	</div>	
 {%endblock content%}
