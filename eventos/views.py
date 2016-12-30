@@ -10,7 +10,7 @@ class ListEventos(View):
 		eventos = Evento.objects.all().order_by("fecha")
 		eventosf = []
 		for evento in eventos:
-			if evento.fecha > hoy:
+			if evento.fecha >= hoy:
 				eventosf.append(evento)
 		context={'eventosf':eventosf}
 		return render(request, template_name, context)

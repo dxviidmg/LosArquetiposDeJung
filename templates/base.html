@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Inicio</title>
+	<title>{%block title%}{%endblock title%}</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css'%}">
 	<link rel="stylesheet" type="text/css" href="{%static 'css/base.css'%}">
@@ -56,7 +56,6 @@
 			</div>
 		</div>
 	</section>
-
 	<script>
 		(function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
