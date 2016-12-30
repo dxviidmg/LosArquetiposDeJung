@@ -23,7 +23,7 @@
 
 					<td>
 						{%if evento.flyer%}
-							<p><img src="/media/{{evento.flyer}}" width="100"></p>
+							<p><img src="{{evento.flyer.url}}" width="100"></p>
 						{%else%}
 							<p><img src="/media/evento/nohayfoto.png" height="100"></p>
 						{%endif%}
@@ -41,6 +41,8 @@
  	<h1 class="texto" align="center">¡¡¡Por el momento no hay shows, inviten a uno!!! lml</h1>
  	
 	{%endfor%}
+	
 		</table>
  	</div>	
+ 	
 {%endblock content%}
