@@ -15,12 +15,11 @@
 					<th><p align="center">Lugar</p></th>
 				</tr>
 			</thead>
+			<tbody>
 
 	{%for evento in eventosf%}
 
-			<tbody>
 				<tr>
-
 					<td>
 						{%if evento.flyer%}
 							<p><img src="{{evento.flyer.url}}" width="100"></p>
@@ -37,12 +36,11 @@
 	{%empty%}
 
 			</tbody>
-
- 	<h1 class="texto" align="center">¡¡¡Por el momento no hay shows, inviten a uno!!! lml</h1>
- 	
+		</table> 	
+		<h1 class="texto" align="center">¡¡¡Por el momento no hay shows, inviten a uno!!! lml</h1>
+	
 	{%endfor%}
 	
-		</table>
  	</div>	
  	
 {%endblock content%}

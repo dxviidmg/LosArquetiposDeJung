@@ -6,17 +6,16 @@
 
 	<div class="table-responsive texto" >
 		<table class="table">
-
 			<thead>
 				<tr>
 					<th><p align="right">Foto</p></th>
 					<th><p>Información</p></th>
 				</tr>
 			</thead>
+			<tbody>
 
 		{%for integrante in integrantes%}
 
-			<tbody>
 				<tr>
 					<td WIDTH=50% class="text-right">
 						<img src="{{integrante.foto.url}}" height="150">
@@ -37,6 +36,4 @@
 		</table>
 	</div>
 
-
-	
 {%endblock content%}
